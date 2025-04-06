@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="welcome-card" id="welcomeCard">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/021/879/379/small/sun-cloud-3d-weather-png.png" alt="Cloudy Weather" class="welcome-icon">
+        <h1><span class="bold">Weather</span> Forecast</h1>
+        <p>Check the latest weather updates for your city with just one click.</p>
+        <button onclick="getStart()">Get Started</button>
+    </div>
+
+    <div class="weather-container hide-container" id="weatherContainer">
+        <div class="weather-header">
+            <h1 id="cityHeading">Please Enter City Name!</h1>
+            <p id="date"></p>
+        </div>
+
+        <div class="weather-main">
+            <div class="temperature" id="temperature"></div>
+            <div class="weather-icon" id="weatherIcon"></div>
+        </div>
+
+        <div class="weather-details">
+            <div class="detail-item">
+                <p><i class="fa-solid fa-droplet"></i></p>
+                <span id="humidity">Humudity</span>
+            </div>
+            <div class="detail-item-2">
+                <p><i class="fa-solid fa-wind"></i></p>
+                <span id="windSpeed">Wind Speed</span>
+            </div>
+            <div class="detail-item-4">
+                <p><i class="fa-solid fa-temperature-half"></i></p>
+                <span id="highLow">High & Low Temp</span>
+            </div>
+            <div class="detail-item-3">
+                <p id="conditionIcon"><i class="fa-solid fa-cloud"></i></p>
+                <span id="description">Condition</span>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" id="cityName">
+            <button onclick="getWeather()">Search</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
