@@ -33,7 +33,7 @@ function getStart() {
 
 
 					// Time Pata karny ky lye:
-					
+
 					const sunriseTime = data.sys.sunrise;
 					const sunsetTime = data.sys.sunset;
 					const currentTime = Math.floor(Date.now() / 1000);
